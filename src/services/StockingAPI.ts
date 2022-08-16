@@ -6,11 +6,11 @@ interface CommonHeaderProperties extends HeadersDefaults {
 }
 
 export const stockingAPIInstance = axios.create({
-  baseURL: 'https://stock-x-wil.herokuapp.com',
+  baseURL: process.env.BASE_URL,
 });
 
 stockingAPIInstance.defaults.headers = {
-  Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndpbGlhbWpvYXF1aW1AZ21haWwuY29tIiwiaWF0IjoxNjYwNjgwMTQ5LCJleHAiOjE2NjUwMDAxNDksInN1YiI6IldpbGlhbSBKb2FxdWltIn0.Nqln4nCMDeU-EEtEqQEo7jdkuJx-MWuB13GM6bD-1ZM`,
+  Authorization: `Bearer ${process.env.TOKEN}`,
 } as CommonHeaderProperties;
 
 export class StockingAPI {
