@@ -6,7 +6,7 @@ interface CommonHeaderProperties extends HeadersDefaults {
 }
 
 export const stockingAPIInstance = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: 'https://stock-x-wil.herokuapp.com',
 });
 
 stockingAPIInstance.defaults.headers = {
